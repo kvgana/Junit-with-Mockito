@@ -1,7 +1,6 @@
-package MainTests;
+package MainClasses;
 
 import java.util.stream.DoubleStream;
-import java.util.stream.IntStream;
 
 
 public class Operations {
