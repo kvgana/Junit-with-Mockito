@@ -18,9 +18,9 @@ public class ToDoBusinessImplMockitoTest {
     public void usingMockito() {
         ToDoService toDoService = mock(ToDoService.class);
         List<String> allToDos = Arrays.asList("Learn Spring MVC", "Learn Spring", "Learn to Code");
-        when(toDoService.retrieveTodos("TestString")).thenReturn(allToDos);
+        when(toDoService.retrieveTodos("User")).thenReturn(allToDos);
         ToDoBusinessImpl toDoBusinessImpl = new ToDoBusinessImpl(toDoService);
-        List<String> todos = toDoBusinessImpl.retrieveToDosRelatedToSpring("TestString");
+        List<String> todos = toDoBusinessImpl.retrieveToDosRelatedToSpring("User");
         Assertions.assertEquals(2, todos.size());
     }
 }

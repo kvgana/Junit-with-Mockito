@@ -14,11 +14,10 @@ public class TodoBusinessImplStubTest {
 
     @Test
     public void usingAStub() {
-        ToDoService toDoService = new ToDoServiceStub();
-        ToDoBusinessImpl toDoBusinessImpl = new ToDoBusinessImpl(toDoService);
-        List<String> todos = toDoBusinessImpl.retrieveToDosRelatedToSpring("TestString");
+        ToDoService toDoServiceStubObject = new ToDoServiceStub();
+        ToDoBusinessImpl toDoBusinessImplForStubObject = new ToDoBusinessImpl(toDoServiceStubObject);
+        List<String> todos = toDoBusinessImplForStubObject.retrieveToDosRelatedToSpring("User");
         Assertions.assertEquals(2, todos.size());
-
     }
 
 }
